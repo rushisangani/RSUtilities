@@ -96,6 +96,18 @@
         
     }];
     
+    /* YES, NO buttons */
+    
+    [self showAlertWithTitle:@"Title" message:@"Message" noButton:^(UIAlertAction *action) {
+        
+        /* handle NO button action */
+        
+    } andYesAction:^(UIAlertAction *action) {
+        
+        /* handle YES button action */
+        
+    }];
+    
     /* String functions */
     
     NSString *string = @"";
