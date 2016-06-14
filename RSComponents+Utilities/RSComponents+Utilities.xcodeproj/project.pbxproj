@@ -494,6 +494,7 @@
 				A2E7AF9D1D0D69660087C8B9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
