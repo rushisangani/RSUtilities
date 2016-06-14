@@ -92,10 +92,10 @@ object = [RSUserDefaults objectForKey:@"key"];
 /* convert date string to date using your desired format */
 NSDate *date = [NSDate getDateFromString:@"23 Jan 2016" withFormat:@"dd MMM yyyy"];
 
-/* get date as string to specified forat */
+/* get date as string to specified format */
 NSString *dateSting = [NSDate getStringFromDate:[NSDate date] withFormat:@"MMM dd yyyy"];
 
-/* conver date string with format to your own format */
+/* convert date string with format to your own format */
 NSString *formattedString = [NSDate convertDateString:@"23 Jan 2016" withFormat:@"dd MMM yyyy" toFormat:@"MM-dd-yyyy"];
 
 /* Date comparision */
@@ -133,6 +133,17 @@ dictionary = [dictionary dictionaryByRemovingNullRecursively:YES];
 } andOkAction:^(UIAlertAction *action) {
 
     /* handle Cancel action */
+}];
+
+/* YES, NO buttons */
+    
+[self showAlertWithTitle:@"Title" message:@"Message" noButton:^(UIAlertAction *action) {
+   
+    /* handle NO button action */
+    
+} andYesAction:^(UIAlertAction *action) {
+    
+    /* handle YES button action */
 }];
 ```
 
