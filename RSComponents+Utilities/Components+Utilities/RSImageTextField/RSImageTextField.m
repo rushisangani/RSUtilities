@@ -42,7 +42,7 @@ static CGFloat kImageHeightWidth = 24;
 - (CGRect)textRectForBounds:(CGRect)bounds {
     
     bounds.origin.x = bounds.origin.x + kLeftImagePadding + kImageHeightWidth + kLeftRightTextPadding;
-    bounds.size.width = bounds.size.width - kLeftImagePadding;
+    bounds.size.width = bounds.size.width - kLeftRightTextPadding;
     
     return bounds;
 }
@@ -50,7 +50,15 @@ static CGFloat kImageHeightWidth = 24;
 - (CGRect)placeholderRectForBounds:(CGRect)bounds {
     
     bounds.origin.x = bounds.origin.x + kLeftImagePadding + kImageHeightWidth + kLeftRightTextPadding;
-    bounds.size.width = bounds.size.width - kLeftImagePadding;
+    bounds.size.width = bounds.size.width - kLeftRightTextPadding;
+    
+    return bounds;
+}
+
+-(CGRect)editingRectForBounds:(CGRect)bounds {
+    
+    bounds.origin.x = bounds.origin.x + kLeftImagePadding + kImageHeightWidth + kLeftRightTextPadding;
+    bounds.size.width = bounds.size.width - kLeftRightTextPadding;
     
     return bounds;
 }
