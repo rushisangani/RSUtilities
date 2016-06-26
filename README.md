@@ -128,11 +128,11 @@ dictionary = [dictionary dictionaryByRemovingNullRecursively:YES];
 
 [self showAlertWithTitle:@"Title" message:@"Message" cancelAction:^(UIAlertAction *action) {
     
-    /* handle OK action */
+    /* handle Cancel action */
 
 } andOkAction:^(UIAlertAction *action) {
 
-    /* handle Cancel action */
+    /* handle Ok action */
 }];
 
 /* YES, NO buttons */
