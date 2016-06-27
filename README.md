@@ -56,6 +56,12 @@ UIButton *button;
 
 /* Set color and border with */
 [button setBorderWidth:1.0 andColor:[UIColor blueColor]];
+
+/* Set bottom border to any view */
+[textField setBottomBorderWithColor:[UIColor orangeColor] andWidth:2];
+
+/* Set top border to any view */
+[button setTopBorderWithColor:[UIColor redColor] andWidth:3];
 ```
 
 ### Associated Objects
