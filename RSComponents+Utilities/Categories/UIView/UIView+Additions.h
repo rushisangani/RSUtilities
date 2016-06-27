@@ -35,4 +35,10 @@
 -(void)setBorderWidth:(CGFloat)width;
 -(void)setBorderColor:(UIColor *)color;
 
+/* set bottom border  */
+-(void)setBottomBorderWithColor:(UIColor *)color andWidth:(CGFloat)width;
+
+/* set top border */
+-(void)setTopBorderWithColor:(UIColor *)color andWidth:(CGFloat)width;
+
 @end

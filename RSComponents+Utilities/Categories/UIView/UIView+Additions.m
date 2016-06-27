@@ -52,4 +52,35 @@
     [self setBorderColor:color];
 }
 
+-(void)setBottomBorderWithColor:(UIColor *)color andWidth:(CGFloat)width {
+    
+    CGPoint startPoint = CGPointMake(0.0, self.frame.size.height);
+    CGPoint endPoint = CGPointMake(self.frame.size.width, self.frame.size.height);
+    
+    [self drawLineFromStart:startPoint toEnd:endPoint withColor:color andWidth:width];
+}
+
+-(void)setTopBorderWithColor:(UIColor *)color andWidth:(CGFloat)width {
+    
+    CGPoint startPoint = CGPointMake(self.frame.origin.x, self.frame.origin.y);
+    CGPoint endPoint = CGPointMake(self.frame.size.width, self.frame.origin.y);
+    
+    [self drawLineFromStart:startPoint toEnd:endPoint withColor:color andWidth:width];
+}
+
+-(void)drawLineFromStart:(CGPoint)startPoint toEnd:(CGPoint)endPoint withColor:(UIColor *)color andWidth:(CGFloat)width {
+    
+    UIBezierPath *path = [UIBezierPath bezierPath];
+    
+    [path moveToPoint:startPoint];
+    [path addLineToPoint:endPoint];
+    
+    CAShapeLayer *shapeLayer = [CAShapeLayer layer];
+    shapeLayer.path = path.CGPath;
+    shapeLayer.strokeColor = color.CGColor;
+    shapeLayer.lineWidth = width;
+    
+    [self.layer addSublayer:shapeLayer];
+}
+
 @end

@@ -59,6 +59,11 @@
     /* set color and border with */
     [button setBorderWidth:1.0 andColor:[UIColor blueColor]];
     
+    /* set bottom border */
+    [textField setBottomBorderWithColor:[UIColor orangeColor] andWidth:2];
+    
+    /* set top border */
+    [button setTopBorderWithColor:[UIColor redColor] andWidth:3];
     
     /* set to user defaults */
     id object;
